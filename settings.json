@@ -1,4 +1,5 @@
 {
+    "scm.alwaysShowProviders": true,
     "vim.insertModeKeyBindings": [
       {
         "before": ["j", "k"],
