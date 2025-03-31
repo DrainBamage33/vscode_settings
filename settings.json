@@ -1,4 +1,28 @@
 {
+  "powermode.enabled": true,
+  "powermode.combo.counterEnabled": "hide",
+  "powermode.combo.timerEnabled": "hide",
+  "powermode.shake.intensity": 1,
+  "powermode.shake.enabled": true,
+  "powermode.explosions.customExplosions": [
+      // "https://media.giphy.com/media/sLMRyFR4eIEgnFe4mK/giphy.gif",
+      // "https://media.giphy.com/media/RFvv2miX3KHcOkBwns/giphy.gif",
+      // "https://media.giphy.com/media/8Hw8ei9OiUXIUlHEBy/giphy.gif"
+      "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzl2ZmJiam1zNWgzdWEyM3Jva3lpOG1tOHEyOG11OXk4emtidGJlcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/QAsu4cugSWDOo7JI8Y/giphy.gif"
+  ],
+  "powermode.explosions.explosionOrder": "sequential",
+  "powermode.explosions.size": 15,
+  "powermode.explosions.frequency": 2,
+  "powermode.explosions.maxExplosions": 5,
+  "powermode.explosions.offset": 0.1,
+  "powermode.explosions.customCss": {
+  
+      "mix-blend-mode": "color-dodge"
+  },
+  "powermode.explosions.gifMode": "restart",
+  "powermode.explosions.duration": 1000,
+  "powermode.explosions.backgroundMode": "mask",
+  "editor.codeActionsOnSave": null,
   "scm.alwaysShowProviders": true,
   "vim.insertModeKeyBindings": [
       {
@@ -6,6 +30,14 @@
         "after": ["<esc>"]
       }
     ],
+  "vim.useCtrlKeys": false,
+  "editor.quickSuggestions": {
+    "other": "off",
+    "comments": "off",
+    "strings": "off"
+  },
+  "editor.quickSuggestionsDelay": 2000,
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.suggest.insertMode": "replace",
   "editor.linkedEditing": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -77,7 +109,7 @@
     {
       "before": ["g", "k"],
       "commands": ["editor.action.goToReferences"]
-    },
+    }
   ],
   "vim.visualModeKeyBindings": [
     // Stay in visual mode while indenting
@@ -99,9 +131,11 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
+  "terminal.integrated.fontFamily": "'JetBrainsMono NF'",
+  "terminal.integrated.fontSize": 14,
   "workbench.colorTheme": "Ayu Mirage Bordered",
   "code-runner.runInTerminal": true,
+  "editor.fontFamily": "'JetBrainsMono NF'",
   "editor.fontSize": 15,
   "workbench.sideBar.location": "right",
   "liveServer.settings.donotShowInfoMsg": true,
@@ -110,5 +144,69 @@
     "/Users/ghaghadayash/my_stuff/personal_coding"
   ],
   "git.autofetch": true,
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "code-runner.executorMap": {
+  
+    
+    "javascript": "node",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "zig": "zig run",
+    // "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "cd $dir && g++ -std=c++17 -Wshadow -Wall -O2 -Wno-unused-result $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "python -u",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "scriptcs",
+    "vbscript": "cscript //Nologo",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runghc",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "sml": "cd $dir && sml $fileName",
+    "mojo": "mojo run",
+    "erlang": "escript",
+    "spwn": "spwn build",
+    "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
+    "gleam": "gleam run -m $fileNameWithoutExt"
+  },
+  "[cpp]": {},
+  "window.newWindowProfile": "Default"
 }
